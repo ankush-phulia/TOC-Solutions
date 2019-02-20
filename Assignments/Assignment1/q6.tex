@@ -1,0 +1,151 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{pdfpages}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\date{January 2019}
+
+\begin{document}
+
+\maketitle
+\textbf{Question 6}\\ \\
+\textbf{i)}
+Since a bijection function is found between the Rationals and Integers in Question 4, thus by the second clause \begin{equation}
+    \mathbb{Z} =_{\#} \mathbb{R}
+\end{equation}
+\\
+\textbf{ii)}
+Let \begin{math}
+f(x): [0,1] \to (10, 100)
+\end{math}  be defined as:
+\begin{equation}
+f(x) = 
+     \begin{cases}
+       \text{x+11} &\quad\text{if x} \in (0, 1)\\
+       \text{12} &\quad\text{if x = 0} \\
+       \text{13} &\quad\text{if x = 1} \\
+     \end{cases}
+\end{equation}
+For a one-one function, if \begin{math}
+x \neq y
+\end{math} then \begin{math}
+f(x) \neq f(y)
+\end{math}
+
+Case 1:
+\begin{math}
+x=0, y=1 \\ 
+f(x)=12, f(y)=13 \\
+f(x) \neq f(y) \\
+\end{math}
+
+Case 2: 
+\begin{math}
+x=0, y \in (0, 1) \\ 
+f(x)=12\\
+f(y) \in (0+11, 1+11) \implies f(y) \in (11, 12) \\
+f(x) \cap f(y) = \phi \\
+\end{math}
+    
+
+Case 3: 
+\begin{math}
+x=1, y \in (0, 1) \\ 
+f(x)=13\\
+f(y) \in (0+11, 1+11) \implies f(y) \in (11, 12) \\
+f(x) \cap f(y) = \phi \\
+\end{math}
+    
+Therefore f(x) is a one one function \\
+
+Let \begin{math}
+g(x): (10, 100) \to [0, 1]
+\end{math}  be defined as:
+\begin{equation}
+g(x) = 
+     \begin{cases}
+       \text{x-20} &\quad\text{if x} \in [20, 30]\\
+       \text{0} &\quad\text{otherwise} \\
+     \end{cases}
+\end{equation}
+
+Let 
+\begin{math}
+y=x-20\end{math} for \begin{math}x \in[20, 30] \\
+\implies x=y+20 \end{math}
+for every \begin{math}
+y \in [0, 1] \\
+\implies x \in [0+20, 0+30]  \\
+\implies x \in [20, 30]
+\end{math}
+
+Thus \begin{math}
+g(x)
+\end{math} is onto \\
+
+Since \begin{math}
+f(x): [0,1] \to (10, 100)
+\end{math} is one-one and \begin{math}
+g(x): (10, 100) \to [0, 1]
+\end{math} is onto, \\therefore \begin{equation}
+    [0, 1] <_{\#} (10, 100)
+\end{equation} \\
+
+Let \begin{math}
+f(x): (10, 100) \to [0, 1]
+\end{math}  be defined as:
+\begin{equation}
+f(x) =  \frac{x-10}{90}
+\end{equation}
+
+Let \begin{math} f(x_{1})=f(x_{2}) \end{math} \\
+\begin{math}\implies \frac{x_{1}-10}{90}=\frac{x_{2}-10}{90} \end{math} \\
+\begin{math}\implies x_{1}=x_{2}\end{math} \\
+Therefore \begin{math}
+f(x)
+\end{math} is one one \\
+
+Let \begin{math}
+g(x): [0,1] \to (10, 100)
+\end{math}  be defined as:
+\begin{equation}
+g(x) = 
+     \begin{cases}
+       \text{\begin{math}
+       90*x+10
+       \end{math}} &\quad\text{if x} \in (0,1)\\
+       \text{20} &\quad\text{if x } \in \{0, 1\} \\
+     \end{cases}
+\end{equation}
+    
+Let \begin{math}
+y=90*x+10
+\end{math} for \begin{math}
+x \in (0,1) \\
+\implies x=\frac{y-10}{90} \\
+\end{math} 
+for every \begin{math}
+ y \in (10, 100), x \in (\frac{10-10}{90}, \frac{100-10}{90}) \\
+\implies x \in (0, 1) \\
+\end{math} 
+Thus, \begin{math}
+g(x)
+\end{math} is onto \\
+
+Since \begin{math}
+f(x): (10, 100) \to [0, 1]
+\end{math} is one-one and \begin{math}
+g(x): [0,1] \to (10, 100)
+\end{math} is onto, \\ therefore \begin{equation}
+(10, 100) <_{\#} [0, 1]
+\end{equation} \\
+
+Thus by equation 4 and 7 and Bernstein-Schroeder theorem, \begin{equation}
+[0, 1] =_{\#} (10, 100)    
+\end{equation}
+
+
+
+\end{document}
