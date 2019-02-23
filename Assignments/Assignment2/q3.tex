@@ -1,0 +1,38 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{Problem Set 1}
+\maketitle
+
+
+\noindent 3. Prove or disprove the following about regular expressions r, s, t where r=s implies L(r)=L(s)
+
+\noindent     (d) (r+s)* = r* + s*
+
+\noindent 
+
+Let $\boldsymbol{\mathrm{\Sigma }}\boldsymbol{=}\left\{\boldsymbol{0},\boldsymbol{1}\right\}$
+
+Let \textbf{r = 0*} and \textbf{s = 1*}
+
+ Then, ${\left(r+s\right)}^*=\epsilon \cup \left\{1,0\right\}\cup {\left\{1,0\right\}}^2\cup {\left\{1,0\right\}}^3\cup \dots $
+
+ And, $r^*+s^*=\epsilon \cup \left\{1\right\}\cup {\left\{1\right\}}^2\cup {\left\{1\right\}}^3\cup \dots \cup \left\{0\right\}\cup {\left\{0\right\}}^2\cup {\left\{0\right\}}^3\cup \dots $
+
+Now, consider a string $\boldsymbol{01}$
+
+$\boldsymbol{01}\in {\left\{1,0\right\}}^2\ \ \Rightarrow \ \ \ \ \boldsymbol{01}\in {\left(r+s\right)}^*$
+
+ But clearly,    $01\notin r^*+s^*$
+
+Hence, (r+s)* $\neq $ r* + s*
+
+\noindent 
+
+
+\end{document}
+
