@@ -38,7 +38,7 @@
     
     \textbf{Solution} : To show $A \iff B$,
     
-    Case I : $A \Longrightarrow B$
+    I) Claim : $A \Longrightarrow B$
     
     Proof : By induction on the length of the string $w$
     
@@ -48,7 +48,7 @@
     
     Induction Step:
     
-    \quad Case(i) - $w$ does not have any prefix with equal number of "(" and ")" : 
+    \quad Case 1 - $w$ does not have any prefix with equal number of "(" and ")" : 
     
     \qquad Then $w$ is of the form $( x )$ for some string $x$. 
     
@@ -60,7 +60,7 @@
     
     
     
-    \quad Case(ii) - $w$ has a prefix $x$ with equal number of ”(” and ”)”
+    \quad Case 2 - $w$ has a prefix $x$ with equal number of ”(” and ”)”
     
     \qquad Then $w$ is of the form $x.y$ for some shortest prefix $x$ and some $y \neq \epsilon$.
     
@@ -75,7 +75,7 @@
     \qquad From B (iii), $w \in B$\\
 
 
-Case II : $B \Longrightarrow A$
+II) Claim : $B \Longrightarrow A$
     
     Proof : By induction on the length of the string $w$
     
@@ -85,7 +85,7 @@ Case II : $B \Longrightarrow A$
     
     Induction Step:
     
-    \quad Case(i) - $w$ is balanced according to B (ii), i.e. $w = (x)$: 
+    \quad Case 1 - $w$ is balanced according to B (ii), i.e. $w = (x)$: 
     
     \qquad By IH, $x$ is balanced by $A$, i.e. $x$ has equal number o f ”(” and ”)” and so is ($x$)
     
@@ -93,7 +93,7 @@ Case II : $B \Longrightarrow A$
     
     \qquad Thus, $w \in A$
     
-    \quad Case(ii) - $w$ is balanced according to B (iii), i.e. $w = x.y$
+    \quad Case 2 - $w$ is balanced according to B (iii), i.e. $w = x.y$
     
     \qquad By IH, $x$ and $y$ are balanced by A, so $x$ and $y$ have equal 
     
@@ -108,6 +108,8 @@ Case II : $B \Longrightarrow A$
     \quad \qquad of $y$ has fewer ”(”. But by IH, prefix of $y$ cannot have less ”(” and ”)”, a contradiction.
     
     \qquad Thus, $w \in A$
+    
+    \quad From I and II, $A \iff B$, hence proved
     
     
     \section*{Problem 2} Show that the Principle of Mathematical Induction and the Principle of Complete induction are equivalent.
@@ -201,13 +203,13 @@ Hint: Express them rigorously as sentences in first order logic.
     \quad \textbf{Bijection 2} - The set $\mathbb{Q^+}$ of positive rational numbers can be written as follows
 
     \begin{center}
-    \includegraphics[width=3.5 in]{Images/a1-q4-1.png}
+    \includegraphics[width=3.5 in]{Images/q4-1.png}
     \end{center}
     
     \quad We map natural numbers diagonally on this array as follows
     
     \begin{center}
-    \includegraphics[width=3.5 in]{Images/a1-q4-2.png}
+    \includegraphics[width=3.5 in]{Images/q4-2.png}
     \end{center}
     
     \quad Numbers in blue are natural numbers. 
@@ -245,15 +247,15 @@ The Bernstein-Schroeder theorem says that If $A \leq_{\#} B$ and $B \leq_{\#} A$
             
     \quad For a one-one function, if $f(x) = f(y)$ then $x = y$
     
-    \quad Case 1 : $x=0, y=1$
+    \quad Case 1 - $x=0, y=1$
     
     \quad $f(x)=12, f(y)=13, ~ f(x) \neq f(y)$
     
-    \quad Case 2: $x=0, y \in (0, 1)$
+    \quad Case 2 - $x=0, y \in (0, 1)$
     
     \quad $f(x)=12, f(y) \in (11, 12), ~f(x) \cap f(y) = \phi $
         
-    \quad Case 3: $x=1, y \in (0, 1)$
+    \quad Case 3 - $x=1, y \in (0, 1)$
     
     \quad $f(x)=13, f(y) \in (11, 12), ~f(x) \cap f(y) = \phi$
         
