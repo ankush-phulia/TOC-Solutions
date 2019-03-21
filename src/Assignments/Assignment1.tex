@@ -113,7 +113,7 @@ II) Claim : $B \Longrightarrow A$
     
     
     \section*{Problem 2} Show that the Principle of Mathematical Induction and the Principle of Complete induction are equivalent.
-Hint: Express them rigorously as sentences in first order logic.
+(Hint: Express them rigorously as sentences in first order logic)
 
     \textbf{Solution} : 
     Let $A$ denote Principle of Mathematical Induction and $B$ denote Principle of Complete Induction. To show $A \iff B$,
@@ -161,10 +161,9 @@ Hint: Express them rigorously as sentences in first order logic.
     \textbf{Solution} : 
     
 \quad \textbf{Bijection 1} - For $i \in \mathbb{N}$, define $T(i)=\begin{cases}
-                \frac{-i}{2}, & \hbox{if i is even;} \\
-                \frac{i+1}{2}, & \hbox{if i is odd.}
-            \end{cases}$
-     Then $T$ is a bijection from $\mathbb{N}$ to $\mathbb{Z}\setminus\{0\}$
+                ~\frac{-i}{2}, & \hbox{if i is even} \\
+               ~\frac{i+1}{2}, & \hbox{if i is odd}
+            \end{cases}$ ~Then $T$ is a bijection from $\mathbb{N}$ to $\mathbb{Z}\setminus\{0\}$
 
     \quad If $n = \prod_{k}p_k^{n_k}$
     
@@ -193,9 +192,9 @@ Hint: Express them rigorously as sentences in first order logic.
     
     \qquad $g(n)=
     \begin{cases}
-        f(n), & \hbox{if $n>0$;} \\
-        f(-n), & \hbox{if $n<0$;} \\
-        0, & \hbox{if $n=0$.}
+        ~f(n), & \hbox{if $n>0$} \\
+        ~f(-n), & \hbox{if $n<0$} \\
+        ~0, & \hbox{if $n=0$}
     \end{cases}$
     
     \qquad Since $f$ is bijection so $g$ is also a bijection. 
@@ -203,13 +202,13 @@ Hint: Express them rigorously as sentences in first order logic.
     \quad \textbf{Bijection 2} - The set $\mathbb{Q^+}$ of positive rational numbers can be written as follows
 
     \begin{center}
-    \includegraphics[width=3.5 in]{Images/q4-1.png}
+    \includegraphics[width=3.5 in]{Images/a1-q4-1.png}
     \end{center}
     
     \quad We map natural numbers diagonally on this array as follows
     
     \begin{center}
-    \includegraphics[width=3.5 in]{Images/q4-2.png}
+    \includegraphics[width=3.5 in]{Images/a1-q4-1.png}
     \end{center}
     
     \quad Numbers in blue are natural numbers. 
@@ -219,9 +218,9 @@ Hint: Express them rigorously as sentences in first order logic.
     \quad Note that this array contains each natural number exactly once and each positive rational number is image of some natural number so the array given above represents a bijection from natural numbers to positive rational numbers. 
     
     \quad Define $g: \mathbb{Z}\rightarrow \mathbb{Q}$ such that $g(n)= \begin{cases}
-        f(n), & \hbox{if $n>0$;} \\
-        f(-n), & \hbox{if $n<0$;} \\
-        0, & \hbox{if $n=0$.}
+        ~f(n), & \hbox{if $n>0$} \\
+        ~f(-n), & \hbox{if $n<0$} \\
+        ~0, & \hbox{if $n=0$}
     \end{cases}$
 
     \quad Since $f$ is bijection, $g$ is also a bijection.
@@ -240,9 +239,9 @@ The Bernstein-Schroeder theorem says that If $A \leq_{\#} B$ and $B \leq_{\#} A$
     
     (ii) Let $f(x): [0,1] \to (10, 100)$  be defined as : $f(x) = 
         \begin{cases}
-               x+11 & \quad if x \in (0, 1)\\
-               12 & \quad if x = 0\\
-               13 & \quad if x = 1 \\
+               ~x+11, & \hbox{if $x \in (0, 1)$}\\
+               ~12, & \hbox{if $x = 0$}\\
+               ~13, &\hbox{if $x = 1$}\\
             \end{cases}$
             
     \quad For a one-one function, if $f(x) = f(y)$ then $x = y$
@@ -264,8 +263,8 @@ The Bernstein-Schroeder theorem says that If $A \leq_{\#} B$ and $B \leq_{\#} A$
     \quad Let $g(x): (10, 100) \to [0, 1]$  be defined as:
     $g(x) = 
          \begin{cases}
-           x-20 &\quad if x \in [20, 30] \\
-           0 &\quad otherwise
+           ~x-20, & \hbox{if $x \in [20, 30]$}\\
+           ~0, & \hbox{otherwise}\\
          \end{cases}$
     
     \quad Let $y=x-20$ for $x \in[20, 30] \implies x=y+20, ~\forall y \in [0, 1] $
@@ -291,8 +290,8 @@ The Bernstein-Schroeder theorem says that If $A \leq_{\#} B$ and $B \leq_{\#} A$
     \quad Let $g(x): [0,1] \to (10, 100)$  be defined as:
     $g(x) = 
          \begin{cases}
-           90x+10 \quad if x \in (0,1) \\
-           20  \quad if x \in \{0, 1\} 
+           ~90x+10, &\hbox{if $x \in (0, 1)$}\\
+           ~20,  &\hbox{if $x \in \{0, 1\}$}\\ 
          \end{cases}$
         
     \quad Let $y=90x+10$ for $x \in (0,1)$
