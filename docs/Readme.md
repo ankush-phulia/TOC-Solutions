@@ -7,7 +7,7 @@ Solutions to the graded assignments and quizzes of [COL 352 - Introduction to Au
 * [Assignment 1](Assignments/Assignment1.pdf)
 * [Assignment 2](Assignments/Assignment2.pdf)
 * [Assignment 3](Assignments/Assignment3.pdf) (and 4)
-* [Assignment 5](default.html)
+* [Assignment 5](Assignments/Assignment4.pdf) (and 6)
 
 
 
