@@ -4,6 +4,7 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{enumerate}
+\usepackage{fancybox}
 
 \usepackage{geometry}
 \geometry{left=2.5cm,right=2.5cm,top=2cm,bottom=2cm}
@@ -132,9 +133,62 @@
     
     \textbf{Solution} :
     
-    a)
+    a) We know that universal language, $L_{u} = \{<M, ~w>|~ M$ is a TM that accepts $w\}$ is undecidable. 
     
-    \\
-    b)
+    \quad Let $L = \{<M_{1}, ~w>| ~M_{1}$ is a TM that accepts $w$ and visits all states $\}$. 
     
+    \quad Showing that $L_{u} \le_{f} L$ will show that $L$ is undecidable.
+    
+    \quad Let $M$ have states $q_{0}, q_{1}, ..., q_{n}$ and a final state $q_{f}$ and accepts string $w$, i.e., $<M, ~w> ~\in L_{u}$. 
+    
+    \quad Let $f$ be a Turing computable function such that $f(M, ~w) = (M_{1}, ~w)$. Then $f$ produces $M_{1}$ such that -
+    \begin{itemize}
+        \item When $M$ reaches $q_{f}$ on $w$, $M_{1}$ goes to the right end of the tape and writes a new symbol $m$ on the first square found with a blank symbol and changes state to a new state $q'$
+        \item $M'$ then makes the following transitions -
+        $$ q' \rightarrow q_{0} \rightarrow q_{1} \rightarrow ... \rightarrow q_{n} \rightarrow q_{f}' $$
+        
+        where $q_{f}'$ is the final state of $M'$.
+    \end{itemize}
+    
+    \quad Thus, $M'$ visits all states on $w$, only if M halts on $w$ in $q_{f}$, i.e., $<M, ~w>~ \in L_{u}$. 
+    
+    \quad Since  $L_{u} \le_{f} L$, therefore $L$ is undecidable. \\
+    
+    b) We prove this for a Turing machine with an semi-infinite tape (equivalent to one with an infinite tape)
+    
+    \quad For a Turing machine $M = ~<Q,~\sum,~\Gamma,~\delta,~q_0,~B,~F>$, and given an integer $B$, define the 
+    
+    \quad partial-snapshot of $M$ as the 3-tuple - (position of head, state, tape contents upto $B$\textsuperscript{th} square)
+    
+    \quad Claim : $L = \{<M, w> |~ M$ is a TM that accepts $w$ and visits the $B$\textsuperscript{th} square $\}$ is decidable
+    
+    \quad Proof : A machine $M$, given $B$ can have at most $n = B|\Gamma|^{B - 1}|Q|$ partial snapshots. 
+    
+    \quad This allows us to formulate an algorithm for the problem as follows
+    
+    \qquad \textbf{for} i = 0 to n + 1
+    
+    \qquad \quad Simulate M for one step
+    
+    \qquad \quad Record the current partial snapshot of M
+    
+    \qquad \quad \textbf{if} $B$\textsuperscript{th} square is reached \textbf{then}
+    
+    \qquad \qquad \textbf{return} ``Yes"
+    
+    \qquad \quad \textbf{else if} current snapshot has been encountered before \textbf{then}
+    
+    \qquad \qquad \textbf{return} ``No"
+    
+    \qquad \quad \textbf{end if}
+    
+    \qquad \textbf{end for}\\
+    
+    \quad Clearly the above algorithm terminates in finite steps for all inputs. For correctness consider the following
+    \begin{enumerate}
+        \item To go beyond the $B$\textsuperscript{th} square, the head needs to reach the $B$\textsuperscript{th} square first, and if that happens at any point the algorithm will return ``Yes".
+        \item In the other case, i.e. the head is restricted to the first $B - 1$ squares, there can only be $n$ different partial snapshots. Thus by PHP, in $n + 1$ steps, at least one snapshot has to occur more than once.
+        \item When a snapshot occurs again, the entire sequence of snapshots from its first occurrence will also repeat (as the state, tape and head position will be the same) after it, implying that the machine will get stuck in an infinite loop. Here, the algorithm correctly outputs ``No"
+    \end{enumerate}
+
 \end{document}
