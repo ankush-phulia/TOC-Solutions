@@ -25,5 +25,5 @@ Solutions to the graded assignments and quizzes of [COL 352 - Introduction to Au
 
 * [Minor 1](Exams/Minor1.pdf)
 * [Minor 2](Exams/Minor2.pdf)
-* [Major](default.html)
+* [Major](Exams/Major.pdf)
 
