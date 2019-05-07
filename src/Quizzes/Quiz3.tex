@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2cm,bottom=2cm}
+
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0em}
+\renewcommand{\baselinestretch}{1.0}
+
+\title{Quiz 3}
+\author{COL 352\\
+    Introduction to Automata \& 
+    Theory of Computation}
+\date{}
+
+\begin{document}
+    \maketitle
+    
+    \section*{Problem 1} Let $L_H = \{~<M,w>|\ M\ halts\ on\ input\ w \}$. Is $L_H$ recursive, or r.e. but not recursive or not r.e. ? Justify
+
+    \textbf{Solution} : $L_H$ is r.e. but not recursive
+    
+    Proof :
+    
+    I) Recursively enumerable : we can construct a Turing Machine $M'$ which semi-decides $L_H$ -
+    \begin{enumerate}[topsep=0pt]
+    \item  For any input M and w, M' simulates M on w.
+    \item  If M halts on input w, go to final state in M'.
+    \end{enumerate}
+    Hence $L_H$ is recursively enumerable.
+    
+    II) Not recursive : we know that Universal TM language is an undecidable/non-recursive language.
+    
+    \quad We can show that $L_H$ is also non-recursive by reducing the Universal TM language ($L_U$) to $L_H$, i.e.
+    
+    \quad $L_U\ {\le }_f\ L_H$, where $f$ is a Turing computable function and is defined as $f(<M,~w>)=\ <M',~w'>$ 
+    
+    \quad such that M' halts on w iff M accepts w, i.e.
+    \begin{enumerate}[leftmargin=3em, topsep=0pt]
+    \item  First simulate M on w.
+    \item  If M accepts w (i.e. it stops in an accepting state), M' should accept w'.
+    \item  If M doesn't stop on w then let M' keep moving right (infinite loop). 
+    \end{enumerate}
+    Hence this reduction shows that $L_H$ is not recursive.
+    
+    
+    \section*{Problem 2} A student unconvinced by the diagonalisation argument for proving $L_d$ is not e.e., approaches her Professor with the following doubt. Since the set $L_d$ is dependent on the ordering of the strings, what if, a different ordering $\mathcal{O}'$ is used? Why will the previous $L_d$ still continue to be a non r.e. set although it does not correspond to the diagonal in $\mathcal{O}'$? Can you answer her doubts? You can assume that both orderings can be computed using a TM.
+    
+    \textbf{Solution} : Given $L_d$ is NOT recursively enumerable set which corresponds to the diagonal in ordering $\mathcal{O}$. Let $L_d'$ be the NOT recursively enumerable set which corresponds to the diagonal in new ordering $\mathcal{O}'$. 
+    
+    Also let old set $L_d$, which does not correspond to the diagonal in the ordering $\mathcal{O}'$, be represented as $S$. Then we have to show that $S$ is still NOT recursively enumerable set although it does not correspond to the diagonal in $\mathcal{O}'$. We will prove the same by using reducibility.
+    
+    Given that both orderings can be computed using a TM. So the identity map $f:L_d\rightarrow S$ is computable which is defined by $f(w_i)=w_j'$ where $w_i$ is $i$th string in ordering $\mathcal{O}$ and $w_j'$ is $j$th string in ordering $\mathcal{O}'$ such that $w_i=w_j'$. Since this identity map is a bijection, so we have $L_d\leq_f S$. If we assume that $S$ is recursively enumerable, then $L_d\leq_f S$ implies that $L_d$ is also recursively enumerable which is a contradiction. 
+    
+    Hence $S$ must be NOT recursively enumerable which implies that $L_d$ remains NOT recursively enumerable set although it does not correspond to the diagonal in $\mathcal{O}'$.
+    
+\end{document}
