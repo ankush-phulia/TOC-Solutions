@@ -25,7 +25,7 @@
     $$A \rightarrow AAA~|~a~|~bA~|~Ab$$
     is it true that it generates all strings with even number of a's? Either give a counter-example or state a formal induction assertion for $S$ and $A$ (induction proof not required) that makes the claim true.
     
-    \textbf{Solution} :
+    \textbf{Solution} : Yes, all the strings with even number of $a$'s can be generated
     
     Induction Assertion : $\forall i \geq 1$ and $\forall w, |w| = i$
     \begin{enumerate}
@@ -88,9 +88,7 @@
     
     \section*{Problem 2} Let $L$ be the language of all strings over the alphabet $\{a, b, c, d\}$ that do not contain an equal number of $a, b, c, d$'s, i.e. $aabcc \in L$, but $abccadbd \notin L$. Is L a CFL? Justify your answer
     
-    \textbf{Solution} :
-    
-    Let $num(x, w)$ denote the number of $x$'s in the word $w$, $x \in \Sigma ~(= \{ a, b, c, d\})$
+    \textbf{Solution} : Let $num(x, w)$ denote the number of $x$'s in the word $w$, $x \in \Sigma ~(= \{ a, b, c, d\})$
     
     Consider the language $L_{xy} = \{w ~|~ num(x, w) \neq num(y, w) \}$
     
@@ -115,6 +113,10 @@
     
     Since the finite union of CFLs yields a CFL (simply another transition from the start symbol), $L$ is a CFL\\
     
-    Common error - $L' = \{w ~|~ num(a, w) \neq num(b, w) \neq num(c,w) \neq num(d,w) \} \neq L$, $L' \subset L$ 
+    Notes on grading - 
+    
+    Correctly identifying CFL is worth 2/10 marks
+    
+    $L' = \{w ~|~ num(a, w) \neq num(b, w) \neq num(c,w) \neq num(d,w) \} \subset L$, 0 if $L' = L$, 
     
 \end{document}
